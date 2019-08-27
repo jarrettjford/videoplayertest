@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Video Player Controls</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+  .btn {
+    border: none;
+    background-color: inherit;
+    padding: 28px 56px;
+    font-size: 32px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Green */
+.success {
+    color: green;
+}
+
+.success:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Blue */
+.info {
+    color: dodgerblue;
+}
+
+.info:hover {
+    background: #2196F3;
+    color: white;
+}
+
+/* Orange */
+.warning {
+    color: orange;
+}
+
+.warning:hover {
+    background: #ff9800;
+    color: white;
+}
+
+/* Red */
+.danger {
+    color: red;
+}
+
+.danger:hover {
+    background: #f44336;
+    color: white;
+}
+
+/* Gray */
+.default {
+    color: black;
+}
+
+.default:hover {
+    background: #e7e7e7;
+}
+
+/* The switch - the box around the slider */ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    display: none;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: lightgray;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #85a3e0;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #85a3e0;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+</style>
+</head>
+
+<body>
+<div id=""
+<center>
+<!-- Rounded switch -->
+<font face="arial" size=10>Vid1 on/off</font>
+<label class="switch">
+  <input type="checkbox" id="vid1-input">
+  <span class="slider round"></span>
+</label>
+<button class="btn success">Vid1 Next Video</button>
+<font face="arial" size=10>Vid2 on/off</font>
+<label class="switch">
+  <input type="checkbox" id="vid2-input">
+  <span class="slider round"></span>
+</label>
+<button class="btn danger">Vid2 Next Video</button>
+</center>
+</body>
+
+</html>
